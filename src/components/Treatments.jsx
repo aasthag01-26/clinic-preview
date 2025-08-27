@@ -11,6 +11,7 @@ const categories = [
 ];
 
 
+
 export default function ExploreTreatments() {
   const navigate = useNavigate();
 
