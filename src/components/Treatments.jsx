@@ -2,12 +2,12 @@
 import { useNavigate } from "react-router-dom";
 
 const categories = [
-  { name: "Advanced Facials", image: "content/Carbon Facial.png" },
+  { name: "Advanced Facials", image: "/content/Carbon Facial.png" },
   { name: "Skin Rejuvenation & Polishing", image: "/images/rejuvenation.jpg" },
-  { name: "Laser Hair Reduction", image: "content/laser.png" },
-  { name: "Body Contouring", image: "content/bodyslimming.png" },
-  { name: "Injectable Treatments", image: "content/injectabletreatment.png" },
-  { name: "Chemical Peels", image: "content/Chemical Peels.png" }
+  { name: "Laser Hair Reduction", image: "/content/laser.png" },
+  { name: "Body Contouring", image: "/content/bodyslimming.png" },
+  { name: "Injectable Treatments", image: "/content/injectabletreatment.png" },
+  { name: "Chemical Peels", image: "/content/Chemical Peels.png" }
 ];
 
 export default function ExploreTreatments() {
