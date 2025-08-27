@@ -54,7 +54,7 @@ const servicesData = {
           id: "lhr-full-face",
           name: "Full Face LHR",
           tagline: "Complete facial hair reduction.",
-          image: "/images/full-face-laser.jpg",
+          image: "/services/fullfacelhr.png",
           description:
             "Get rid of unwanted hair across your forehead, cheeks, upper lip, chin, and sideburns. Achieve a smoother, clearer look without the need for regular threading or waxing.",
           details: {
