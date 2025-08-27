@@ -1,56 +1,38 @@
-// src/components/Treatments.jsx
-import React from "react";
-import { Link } from "react-router-dom";
+// src/components/ExploreTreatments.jsx
+import { useNavigate } from "react-router-dom";
 
-const treatments = [
-  {
-    title: "Laser Hair Reduction",
-    description: "Safe, effective laser sessions for long-term hair reduction.",
-    image: "/images/laser-hair-reduction.jpg",
-  },
-  {
-    title: "Skin Rejuvenation",
-    description: "Restore youth & glow with advanced rejuvenating therapies.",
-    image: "/images/skin-rejuvenation.jpg",
-  },
-  {
-    title: "Chemical Peels",
-    description: "Brighten skin and reduce marks with customized peels.",
-    image: "/images/chemical-peels.jpg",
-  },
+const categories = [
+  { name: "Advanced Facials", image: "content/Carbon Facial.png" },
+  { name: "Skin Rejuvenation & Polishing", image: "/images/rejuvenation.jpg" },
+  { name: "Laser Hair Reduction", image: "content/laser.png" },
+  { name: "Body Contouring", image: "content/bodyslimming.png" },
+  { name: "Injectable Treatments", image: "content/injectabletreatment.png" },
+  { name: "Chemical Peels", image: "content/Chemical Peels.png" }
 ];
 
-export default function Treatments({ onEnquire }) {
+export default function ExploreTreatments() {
+  const navigate = useNavigate();
+
+  const handleClick = (category) => {
+    navigate(`/services?category=${encodeURIComponent(category)}`);
+  };
+
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-10">
-          Our Premier Treatments
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {treatments.map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-md">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="rounded-md mb-4 w-full h-48 object-cover"
-              />
-              <h3 className="text-xl font-semibold text-gray-700">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 mt-2">{item.description}</p>
-              
-              <button
-                onClick={() => onEnquire(item.title)}
-                className="text-teal-600 font-medium mt-4 inline-block"
-              >
-              Enquire →
-             </button>
-
-
+    <section className="py-12 bg-[#FFF5EF]">
+      <h2 className="text-3xl font-bold text-center mb-8">Explore Our Treatments</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {categories.map((c, i) => (
+          <div
+            key={i}
+            className="relative cursor-pointer rounded-2xl overflow-hidden shadow-lg"
+            onClick={() => handleClick(c.name)}
+          >
+            <img src={c.image} alt={c.name} className="w-full h-56 object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <span className="text-white text-xl font-semibold">{c.name}</span>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

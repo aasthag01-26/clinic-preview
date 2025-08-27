@@ -3,81 +3,77 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar({ onOpenBooking }) {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navLinks = [
+  const navItems = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
+    { path: "/services", label: "Our Services" },
     { path: "/contact", label: "Contact" },
   ];
 
   return (
-    <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
-        {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-brand-600">Clinic</Link>
+    <nav className="bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        <Link to="/" className="text-2xl font-bold text-pink-700">Rupayna</Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 items-center">
-          {navLinks.map((link) => (
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-6 items-center">
+          {navItems.map((item) => (
             <Link
-              key={link.path}
-              to={link.path}
-              className={`hover:text-brand-600 transition ${
-                location.pathname === link.path
-                  ? "text-brand-600 font-semibold"
-                  : "text-gray-700"
-              }`}
+              key={item.path}
+              to={item.path}
+              className={`${
+                location.pathname === item.path ? "text-pink-700 font-semibold" : "text-gray-700"
+              } hover:text-pink-700`}
             >
-              {link.label}
+              {item.label}
             </Link>
           ))}
           <button
-            onClick={onOpenBooking}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 shadow-md"
+            onClick={() => onOpenBooking({ label: "General Appointment", price: null })}
+            className="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700"
           >
-            Book Appointment
+            Book Now
           </button>
-        </nav>
+        </div>
 
-        {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
-          {open ? <X size={28} /> : <Menu size={28} />}
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
-      {open && (
+      {/* Mobile dropdown */}
+      {menuOpen && (
         <div className="md:hidden bg-white shadow-lg">
-          <nav className="flex flex-col gap-4 p-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setOpen(false)}
-                className={`text-left ${
-                  location.pathname === link.path
-                    ? "text-brand-600 font-semibold"
-                    : "text-gray-700"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <button
-              onClick={() => {
-                onOpenBooking();
-                setOpen(false);
-              }}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full shadow-md"
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setMenuOpen(false)}
+              className={`block px-4 py-3 border-b ${
+                location.pathname === item.path ? "text-pink-700 font-semibold" : "text-gray-700"
+              } hover:bg-gray-50`}
             >
-              Book Appointment
-            </button>
-          </nav>
+              {item.label}
+            </Link>
+          ))}
+          <button
+            onClick={() => {
+              setOnpenBooking({ label: "General Appointment", price: null });
+              setMenuOpen(false);
+            }}
+            className="w-full px-4 py-3 bg-pink-600 text-white text-left hover:bg-pink-700"
+          >
+            Book Now
+          </button>
         </div>
       )}
-    </header>
+    </nav>
   );
 }
