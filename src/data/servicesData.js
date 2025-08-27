@@ -10,7 +10,7 @@ const servicesData = {
           id: "lhr-full-body",
           name: "Full Body Laser Hair Reduction",
           tagline: "Permanent reduction of unwanted body hair.",
-          image: "public/services/fullbodylazer.png",
+          image: "/services/fullbodylazer.png",
           description:
             "Enjoy the freedom of smooth, hair-free skin from head to toe. Our advanced diode laser offers long-term reduction across large areas with minimal discomfort and maximum safety.",
           details: {
