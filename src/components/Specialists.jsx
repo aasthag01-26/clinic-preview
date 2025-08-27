@@ -15,7 +15,7 @@ export default function Specialists() {
           {/* Doctor 1 */}
           <div className="bg-white shadow-md rounded-xl p-6">
             <img
-              src="content/doctor.jpg"
+              src="/doctor.jpg"
               alt="Dr. Shailesh Kumar"
               className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
             />
@@ -33,7 +33,7 @@ export default function Specialists() {
           {/* Doctor 2 */}
           <div className="bg-white shadow-md rounded-xl p-6">
             <img
-              src="content/doctor kanchan.jpg"
+              src="/doctorkanchan.jpg"
               alt="Dr. Kanchan Suthar"
               className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
             />

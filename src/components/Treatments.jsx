@@ -6,7 +6,7 @@ const categories = [
   { name: "Skin Rejuvenation & Polishing", image: "/rejuvenation.jpg" },
   { name: "Laser Hair Reduction", image: "/laser.png" },
   { name: "Body Contouring", image: "/bodyslimming.png" },
-  { name: "Injectable Treatments", image: "/injecttreatment.png" },
+  { name: "Injectable Treatments", image: "/injectabletreatment.png" },
   { name: "Chemical Peels", image: "/ChemicalPeels.png" }
 ];
 
