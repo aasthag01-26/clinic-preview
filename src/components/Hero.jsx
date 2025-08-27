@@ -52,7 +52,7 @@ export default function Hero({ onOpenBooking }) {
         {/* RIGHT: Video */}
         <div className="p-3 bg-white rounded-xl shadow-lg">
           <video
-            src="content/rupanya video.mp4"
+            src="/content/rupanya video.mp4"
             autoPlay
             controls
             loop
