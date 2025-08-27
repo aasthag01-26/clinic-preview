@@ -52,12 +52,12 @@ export default function ServiceAccordion({ service, isExpanded, onToggle, onBook
             )}
 
             <div className="flex gap-4 items-center">
-              <button onClick={() => onBook()} className="bg-black text-white px-4 py-2 rounded-lg">Book Now</button>
+              <button onClick={() => onBook(service.name)} className="bg-black text-white px-4 py-2 rounded-lg">Book Now</button>
 
               {service.variants?.length > 0 && (
                 <div className="flex gap-2">
                   {service.variants.map((v, idx) => (
-                    <button key={idx} onClick={() => onBook(v)} className="border px-3 py-2 rounded-md text-sm">
+                    <button key={idx} onClick={() => onBook(`${service.name} - ${v.name}`)} className="border px-3 py-2 rounded-md text-sm">
                       {v.name} • {formatRupee(v.price)}
                     </button>
                   ))}

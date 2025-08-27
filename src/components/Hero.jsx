@@ -32,7 +32,7 @@ export default function Hero({ onOpenBooking }) {
             </Link>
 
             <a
-              href="https://wa.me/917378626348"
+              href="https://wa.me/919205661676"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg flex items-center gap-2"
@@ -41,7 +41,7 @@ export default function Hero({ onOpenBooking }) {
             </a>
 
             <a
-              href="tel:+917378626348"
+              href="tel:+919205661676"
               className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg flex items-center gap-2"
             >
               <FaPhoneAlt size={18} /> Call Now

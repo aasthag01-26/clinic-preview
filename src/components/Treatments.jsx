@@ -3,21 +3,18 @@ import { useNavigate } from "react-router-dom";
 
 const categories = [
   { name: "Advanced Facials", image: "/CarbonFacial.png" },
-  { name: "Skin Rejuvenation & Polishing", image: "/rejuvenation.jpg" },
+  { name: "Skin Rejuvenation & Polishing", image: "/skinrejuvenation.png" },
   { name: "Laser Hair Reduction", image: "/laser.png" },
   { name: "Body Contouring", image: "/bodyslimming.png" },
   { name: "Injectable Treatments", image: "/injectabletreatment.png" },
-  { name: "Chemical Peels", image: "/ChemicalPeels.png" }
+  { name: "Chemical Peels", image: "/ChemicalPeels.png" },
 ];
-
-
-
 
 export default function ExploreTreatments() {
   const navigate = useNavigate();
 
   const handleClick = (category) => {
-    navigate(`/services?category=${encodeURIComponent(category)}`);
+    navigate(`/services?concern=${encodeURIComponent(category)}`); // ✅ fixed
   };
 
   return (
@@ -31,7 +28,7 @@ export default function ExploreTreatments() {
             onClick={() => handleClick(c.name)}
           >
             <img src={c.image} alt={c.name} className="w-full h-56 object-cover" />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <span className="text-white text-xl font-semibold">{c.name}</span>
             </div>
           </div>

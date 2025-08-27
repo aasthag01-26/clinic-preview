@@ -18,10 +18,10 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
           <p className="flex items-center gap-2">
-            <Phone size={18} /> +917378626348
+            <Phone size={18} /> +919205661676
           </p>
           <p className="flex items-center gap-2">
-            <Mail size={18} /> info@rupayna.com
+            <Mail size={18} /> tanyagoyal18404@gmail.com
           </p>
           <p className="flex items-center gap-2">
             <MapPin size={18} /> New Delhi, India
@@ -32,15 +32,21 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Follow Us</h3>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-blue-400 flex items-center gap-2">
+            {/* <a href="#" className="hover:text-blue-400 flex items-center gap-2">
               <Facebook size={18} /> Facebook
-            </a>
-            <a href="#" className="hover:text-blue-400 flex items-center gap-2">
+            </a> */}
+            <a href="https://www.instagram.com/purelyrupayna?igsh=bGYxcm1wZDNtdXRl" className="hover:text-blue-400 flex items-center gap-2">
               <Instagram size={18} /> Instagram
             </a>
-            <a href="#" className="hover:text-blue-400 flex items-center gap-2">
-              <MessageCircle size={18} /> WhatsApp
-            </a>
+            <a
+  href="https://wa.me/919205661676"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-blue-400 flex items-center gap-2"
+>
+  <MessageCircle size={18} /> WhatsApp
+</a>
+
           </div>
         </div>
       </div>

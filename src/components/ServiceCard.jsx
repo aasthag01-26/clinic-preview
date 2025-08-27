@@ -20,7 +20,7 @@ export default function ServiceCard({ service, onBook, onView }) {
             View Details
           </button>
           <button
-            onClick={() => onBook(service)}
+            onClick={() => onBook(service.name)}
             className="bg-black text-white px-4 py-1 rounded-lg"
           >
             Book Now

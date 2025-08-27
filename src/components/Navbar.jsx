@@ -32,7 +32,7 @@ export default function Navbar({ onOpenBooking }) {
             </Link>
           ))}
           <button
-            onClick={() => onOpenBooking({ label: "General Appointment", price: null })}
+            onClick={() => onOpenBooking("General Enquiry")} // ✅ Pass string
             className="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700"
           >
             Book Now
@@ -65,7 +65,7 @@ export default function Navbar({ onOpenBooking }) {
           ))}
           <button
             onClick={() => {
-              setOnpenBooking({ label: "General Appointment", price: null });
+              onOpenBooking("General Enquiry"); // ✅ Pass string
               setMenuOpen(false);
             }}
             className="w-full px-4 py-3 bg-pink-600 text-white text-left hover:bg-pink-700"
