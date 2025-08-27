@@ -80,7 +80,7 @@ const servicesData = {
           id: "lhr-upperlower-face",
           name: "Upper Face / Lower Face LHR",
           tagline: "Quick sessions for upper/lower face.",
-          image: "/images/face-laser.jpg",
+          // image: "/images/face-laser.jpg",
           description:
             "Target specific areas like the forehead, chin, or jawline. A short, effective laser session designed for precision and fast results.",
           details: {
@@ -103,7 +103,7 @@ const servicesData = {
           id: "lhr-upperlip-chin",
           name: "Upper Lip & Chin LHR",
           tagline: "Fast treatment for upper lip & chin.",
-          image: "/images/upper-lip-chin.jpg",
+          // image: "/images/upper-lip-chin.jpg",
           description:
             "A quick solution for stubborn upper lip and chin hair. Say goodbye to frequent threading and enjoy smoother skin for weeks at a time.",
           details: {
@@ -126,7 +126,7 @@ const servicesData = {
           id: "lhr-side-locks",
           name: "Side Locks LHR",
           tagline: "Remove sideburns & facial hair.",
-          image: "/images/side-locks.jpg",
+          // image: "/images/side-locks.jpg",
           description:
             "Redefine your facial profile with precise laser shaping of sideburns and temple areas. Gentle on skin, long-lasting on results.",
           details: {
@@ -149,7 +149,7 @@ const servicesData = {
           id: "lhr-underarms",
           name: "Underarms LHR",
           tagline: "Long lasting underarm hair reduction.",
-          image: "/images/underarms-laser.jpg",
+          // image: "/images/underarms-laser.jpg",
           description:
             "Say goodbye to daily shaving and dark patches. Our underarm laser not only removes hair but also improves skin texture and pigmentation over time.",
           details: {
@@ -172,7 +172,7 @@ const servicesData = {
           id: "lhr-bikini-line",
           name: "Bikini Line LHR",
           tagline: "Clean bikini line with long-term results.",
-          image: "/images/bikini-laser.jpg",
+          // image: "/images/bikini-laser.jpg",
           description:
             "Enjoy confidence in swimwear and intimate wear. Our safe bikini line laser treatment ensures hygiene, comfort, and long-term smoothness.",
           details: {
@@ -195,7 +195,7 @@ const servicesData = {
           id: "lhr-full-front",
           name: "Full Front LHR",
           tagline: "Front body hair reduction.",
-          image: "/images/full-front.jpg",
+          // image: "/images/full-front.jpg",
           description:
             "Smoothen your chest, abs, and front torso with effective diode laser treatment. Ideal for men and women looking for clean, well-groomed skin.",
           details: {
@@ -218,7 +218,7 @@ const servicesData = {
           id: "lhr-full-back",
           name: "Full Back LHR",
           tagline: "Back hair removal & smoothing.",
-          image: "/images/full-back-laser.jpg",
+          // image: "/images/full-back-laser.jpg",
           description:
             "Achieve a clean, smooth back with our diode laser. No more shaving hard-to-reach spots — enjoy long-term results and improved confidence.",
           details: {
@@ -241,7 +241,7 @@ const servicesData = {
           id: "lhr-full-arms",
           name: "Full Arms LHR",
           tagline: "Smooth, hair-reduced arms.",
-          image: "/images/full-arms.jpg",
+          // image: "/images/full-arms.jpg",
           description:
             "Get sleek, hair-free arms that stay smooth for weeks. Our diode laser covers shoulders to wrists with precision and comfort.",
           details: {
@@ -264,7 +264,7 @@ const servicesData = {
           id: "lhr-full-legs",
           name: "Full Legs LHR",
           tagline: "Legs hair reduction for smooth skin.",
-          image: "/images/full-legs.jpg",
+          // image: "/images/full-legs.jpg",
           description:
             "Walk confidently with hair-free legs. Our diode laser ensures long-term smoothness without the hassle of razors or waxing strips.",
           details: {
@@ -296,7 +296,7 @@ const servicesData = {
       id: "facial-derma-revive",
       name: "Derma Revive Facial",
       tagline: "Revive tired skin with deep hydration.",
-      image: "/images/derma-revive.jpg",
+      // image: "/images/derma-revive.jpg",
       description: "Multi-step facial to deeply hydrate & restore glow.",
       details: {
         about: "The Derma Revive Facial is a luxurious treatment that restores deep hydration while improving skin barrier strength. It revives dull, fatigued skin and leaves it plump, supple, and glowing.",
@@ -334,7 +334,7 @@ const servicesData = {
       id: "facial-korean",
       name: "Korean Glass-Skin Facial",
       tagline: "Hydration & glow, Korean-style.",
-      image: "/images/korean-facial.jpg",
+      // image: "/images/korean-facial.jpg",
       description: "Brightens skin and reduces pigmentation for a glass-skin finish.",
       details: {
         about: "An advanced Korean-inspired multi-step facial that deeply hydrates and brightens skin. It helps reduce pigmentation, refine texture, and deliver a glass-skin glow.",
@@ -370,7 +370,7 @@ const servicesData = {
       id: "facial-acne-arrestor",
       name: "Acne Arrestor Facial",
       tagline: "Targets acne & calms skin.",
-      image: "/images/acne-facial.jpg",
+      // image: "/images/acne-facial.jpg",
       description: "Reduces acne, unclogs pores & soothes irritation.",
       details: {
         about: "The Acne Arrestor Facial is specifically designed for acne-prone skin. It clears clogged pores, reduces active breakouts, and calms redness for a clearer complexion.",
@@ -407,7 +407,7 @@ const servicesData = {
       id: "facial-quick-fix",
       name: "Quick Fix Radiance Facial",
       tagline: "Instant glow for events.",
-      image: "/images/quick-fix.jpg",
+      // image: "/images/quick-fix.jpg",
       description: "Fast brightening treatment for pre-events.",
       details: {
         about: "A 30–40 minute express treatment designed to give you an instant glow before an event. Perfect for those short on time but in need of visible brightness.",
@@ -435,7 +435,7 @@ const servicesData = {
       id: "facial-insta-collagen",
       name: "Insta Collagen Boost Facial",
       tagline: "Plumps skin with collagen infusion.",
-      image: "/images/collagen-boost.jpg",
+      // image: "/images/collagen-boost.jpg",
       description: "Stimulates collagen to improve elasticity & reduce fine lines.",
       details: {
         about: "A rejuvenating facial that stimulates collagen production, reduces fine lines, and enhances skin elasticity for a youthful appearance.",
@@ -464,7 +464,7 @@ const servicesData = {
       id: "facial-hydra-boost",
       name: "Hydra Boost Facial",
       tagline: "Deep hydration & soothing.",
-      image: "/images/hydra-boost.jpg",
+      // image: "/images/hydra-boost.jpg",
       description: "Replenishes skin moisture and repairs barrier.",
       details: {
         about: "The Hydra Boost Facial is a hydration-focused treatment that restores moisture levels, soothes sensitivity, and leaves skin looking fresh and supple.",
@@ -492,7 +492,7 @@ const servicesData = {
       id: "facial-double-derma-boost",
       name: "Double Derma Boost Facial",
       tagline: "Dual-action rejuvenation.",
-      image: "/images/double-derma.jpg",
+      // image: "/images/double-derma.jpg",
       description: "Combines exfoliation + infusion for advanced glow.",
       details: {
         about: "This advanced facial combines two skin-boosting steps: deep exfoliation followed by nutrient-rich infusion for brighter, healthier skin.",
@@ -519,7 +519,7 @@ const servicesData = {
       id: "facial-elastic-boost",
       name: "Elastic Boost Facial",
       tagline: "Restores firmness & elasticity.",
-      image: "/images/elastic-boost.jpg",
+      // image: "/images/elastic-boost.jpg",
       description: "Firming treatment to fight sagging & loss of elasticity.",
       details: {
         about: "A peptide-powered facial that restores firmness, improves elasticity, and provides visible lifting for mature or sagging skin.",
@@ -547,7 +547,7 @@ const servicesData = {
       id: "facial-couple-laser",
       name: "Couple Laser Facial",
       tagline: "Glow together, skin sync radiance.",
-      image: "/images/couple-laser.jpg",
+      // image: "/images/couple-laser.jpg",
       description: "A relaxing laser facial designed for two.",
       details: {
         about: "Enjoy a premium laser facial together with a partner or friend. This treatment offers the same skin-rejuvenating benefits while making it a memorable shared experience.",
