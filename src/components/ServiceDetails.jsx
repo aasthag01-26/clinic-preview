@@ -4,7 +4,7 @@ export default function ServiceDetails({ service, onClose, onBook }) {
 
   return (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
-      <div className="bg-white p-6 rounded-2xl max-w-3xl w-full shadow-lg">
+      <div className="bg-white p-6 rounded-2xl max-w-3xl w-full shadow-lg overflow-y-auto max-h-[90vh]">
         <div className="flex justify-between items-start mb-2">
           <h2 className="text-2xl font-bold">{service.name}</h2>
           <button onClick={onClose} className="text-gray-500">✕</button>
@@ -19,8 +19,9 @@ export default function ServiceDetails({ service, onClose, onBook }) {
           />
         )}
 
-        <p className="text-gray-700 mb-2">{service.description}</p>
-        <p className="text-gray-900 font-semibold mb-4">Price: ₹{service.price}</p>
+        {service.description && (
+          <p className="text-gray-700 mb-2">{service.description}</p>
+        )}
 
         {service.details?.what && (
           <>
@@ -56,7 +57,7 @@ export default function ServiceDetails({ service, onClose, onBook }) {
 
         <div className="mt-5 flex gap-3">
           <button
-            onClick={() => onBook(service.name)}
+            onClick={() => onBook(service)}
             className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800"
           >
             Book Now

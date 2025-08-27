@@ -45,7 +45,7 @@ export default function Services({ onOpenBooking }) {
           ))}
         </div>
 
-        {/* Category Content */}
+        {/* Services Grid */}
         {currentCategory && (
           <div>
             <h3 className="text-2xl font-semibold text-center mb-2">
@@ -71,9 +71,7 @@ export default function Services({ onOpenBooking }) {
                   )}
 
                   <h4 className="text-lg font-semibold">{s.name}</h4>
-                  {s.price && (
-                    <p className="text-gray-600 mt-2">₹{s.price}</p>
-                  )}
+
                   {s.description && (
                     <p className="text-gray-500 text-sm mt-2 line-clamp-3">
                       {s.description}
@@ -81,12 +79,10 @@ export default function Services({ onOpenBooking }) {
                   )}
 
                   <div className="flex gap-3 mt-4">
-                    {/* WhatsApp / Email / Booking button */}
                     <button
                       onClick={() =>
                         onOpenBooking({
                           label: s.name,
-                          price: s.price,
                           category: currentCategory.category,
                           id: s.id,
                         })
@@ -97,7 +93,12 @@ export default function Services({ onOpenBooking }) {
                     </button>
 
                     <button
-                      onClick={() => setDetailService(s)}
+                      onClick={() =>
+                        setDetailService({
+                          ...s,
+                          category: currentCategory.category,
+                        })
+                      }
                       className="px-4 py-2 border rounded-xl hover:bg-gray-100"
                     >
                       View Details
@@ -119,9 +120,8 @@ export default function Services({ onOpenBooking }) {
             setDetailService(null);
             onOpenBooking({
               label: svc.name,
-              price: svc.price,
-              category: activeCategory,
               id: svc.id,
+              category: svc.category,
             });
           }}
         />
