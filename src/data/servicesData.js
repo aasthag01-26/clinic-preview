@@ -10,7 +10,7 @@ const servicesData = {
           id: "lhr-full-body",
           name: "Full Body Laser Hair Reduction",
           tagline: "Permanent reduction of unwanted body hair.",
-          image: "images/face-laser.jpg",
+          image: "/fullbodylazer.png",
           description:
             "Enjoy the freedom of smooth, hair-free skin from head to toe. Our advanced diode laser offers long-term reduction across large areas with minimal discomfort and maximum safety.",
           details: {
@@ -54,7 +54,7 @@ const servicesData = {
           id: "lhr-full-face",
           name: "Full Face LHR",
           tagline: "Complete facial hair reduction.",
-          image: "images/face-laser.jpg",
+          image: "/fullfacehr.png",
           description:
             "Get rid of unwanted hair across your forehead, cheeks, upper lip, chin, and sideburns. Achieve a smoother, clearer look without the need for regular threading or waxing.",
           details: {
