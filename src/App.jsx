@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import StickyButtons from "./components/StickyButtons";
-// import StickyContactBar from "./components/StickyContactBar";
 import ThankYou from "./pages/ThankYou";
 import BookingModal from "./components/BookingModal";
 

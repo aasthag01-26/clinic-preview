@@ -15,7 +15,7 @@ const FORMSPREE_ID = "mrbabela"; // replace with your Formspree ID
 export default function BookingForm({ onClose, selectedService }) {
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
+  const initialForm = {
     name: "",
     phone: "",
     email: "",
@@ -23,11 +23,13 @@ export default function BookingForm({ onClose, selectedService }) {
     date: "",
     preferredTime: "",
     message: "",
-  });
+  };
 
+  const [formData, setFormData] = useState(initialForm);
+  const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
 
-  // ✅ Pre-fill service if user clicked "Book Now"
+  // ✅ Pre-fill service if coming from "Book Now"
   useEffect(() => {
     if (selectedService) {
       setFormData((prev) => ({
@@ -37,12 +39,35 @@ export default function BookingForm({ onClose, selectedService }) {
     }
   }, [selectedService]);
 
+  const validate = () => {
+    let errs = {};
+    if (!formData.name.trim()) errs.name = "Name is required";
+    if (!/^\d{10}$/.test(formData.phone)) errs.phone = "Enter a valid 10-digit number";
+    if (!/\S+@\S+\.\S+/.test(formData.email)) errs.email = "Enter a valid email";
+    if (!formData.service) errs.service = "Please select a service";
+    if (!formData.preferredTime) errs.preferredTime = "Please select a time slot";
+    if (!formData.date) errs.date = "Please select a date";
+    return errs;
+  };
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    // ✅ allow only digits in phone
+    if (name === "phone") {
+      if (!/^\d*$/.test(value)) return;
+    }
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setErrors({});
     setIsSending(true);
 
     try {
@@ -56,8 +81,9 @@ export default function BookingForm({ onClose, selectedService }) {
       });
 
       if (res.ok) {
+        setFormData(initialForm);
         onClose();
-        navigate("/thank-you"); // ✅ redirect closes popup automatically
+        navigate("/thank-you");
       } else {
         alert("❌ Something went wrong. Please try again.");
       }
@@ -75,57 +101,66 @@ export default function BookingForm({ onClose, selectedService }) {
     <form
       onSubmit={handleSubmit}
       className="bg-white p-6 rounded-2xl shadow-lg w-full max-w-md"
+      noValidate
     >
-      <h2 className="text-xl font-bold mb-4 text-center">
-        Book an Appointment
-      </h2>
+      <h2 className="text-xl font-bold mb-4 text-center">Book an Appointment</h2>
 
-      {/* Full Name */}
-      <label className="block mb-1 font-medium">Full Name</label>
+      {/* Name */}
+      <label className="block mb-1 font-medium" htmlFor="name">
+        Full Name
+      </label>
       <input
+        id="name"
         type="text"
         name="name"
         value={formData.name}
         onChange={handleChange}
-        className="w-full border p-2 rounded mb-3"
+        className="w-full border p-2 rounded mb-1"
         placeholder="Enter your full name"
-        required
       />
+      {errors.name && <p className="text-red-500 text-sm mb-2">{errors.name}</p>}
 
-      {/* Phone Number */}
-      <label className="block mb-1 font-medium">Phone Number</label>
+      {/* Phone */}
+      <label className="block mb-1 font-medium" htmlFor="phone">
+        Phone Number
+      </label>
       <input
+        id="phone"
         type="tel"
         name="phone"
         value={formData.phone}
         onChange={handleChange}
-        pattern="[0-9]{10}"
         maxLength="10"
-        className="w-full border p-2 rounded mb-3"
-        placeholder="Enter 10-digit phone number"
-        required
+        className="w-full border p-2 rounded mb-1"
+        placeholder="10-digit number"
       />
+      {errors.phone && <p className="text-red-500 text-sm mb-2">{errors.phone}</p>}
 
-      {/* Email Address */}
-      <label className="block mb-1 font-medium">Email Address</label>
+      {/* Email */}
+      <label className="block mb-1 font-medium" htmlFor="email">
+        Email Address
+      </label>
       <input
+        id="email"
         type="email"
         name="email"
         value={formData.email}
         onChange={handleChange}
-        className="w-full border p-2 rounded mb-3"
+        className="w-full border p-2 rounded mb-1"
         placeholder="you@example.com"
-        required
       />
+      {errors.email && <p className="text-red-500 text-sm mb-2">{errors.email}</p>}
 
-      {/* Services Dropdown */}
-      <label className="block mb-1 font-medium">Select Service</label>
+      {/* Service */}
+      <label className="block mb-1 font-medium" htmlFor="service">
+        Select Service
+      </label>
       <select
+        id="service"
         name="service"
         value={formData.service}
         onChange={handleChange}
-        className="w-full border p-2 rounded mb-3"
-        required
+        className="w-full border p-2 rounded mb-1"
       >
         <option value="">Choose a service</option>
         <option value="General Enquiry">General Enquiry</option>
@@ -134,55 +169,67 @@ export default function BookingForm({ onClose, selectedService }) {
             {s}
           </option>
         ))}
-        {/* ✅ Ensure pre-filled services (from Book Now) show up */}
         {formData.service &&
           !["General Enquiry", ...servicesList].includes(formData.service) && (
             <option value={formData.service}>{formData.service}</option>
           )}
       </select>
+      {errors.service && <p className="text-red-500 text-sm mb-2">{errors.service}</p>}
 
-      {/* Preferred Time Slot */}
-      <label className="block mb-1 font-medium">Preferred Time Slot</label>
+      {/* Time */}
+      <label className="block mb-1 font-medium" htmlFor="preferredTime">
+        Preferred Time Slot
+      </label>
       <select
+        id="preferredTime"
         name="preferredTime"
         value={formData.preferredTime}
         onChange={handleChange}
         className="w-full border p-2 rounded mb-1"
-        required
       >
         <option value="">Choose a time slot</option>
         <option value="Morning">Morning (9am - 12pm)</option>
         <option value="Afternoon">Afternoon (1pm - 4pm)</option>
         <option value="Evening">Evening (4pm - 7pm)</option>
       </select>
+      {errors.preferredTime && (
+        <p className="text-red-500 text-sm mb-2">{errors.preferredTime}</p>
+      )}
+
       <p className="text-xs text-gray-500 mb-3">
         We’ll call you to confirm the exact appointment time.
       </p>
 
       {/* Date */}
-      <label className="block mb-1 font-medium">Preferred Date</label>
+      <label className="block mb-1 font-medium" htmlFor="date">
+        Preferred Date
+      </label>
       <input
+        id="date"
         type="date"
         name="date"
         value={formData.date}
         onChange={handleChange}
-        min={today} // ✅ disable past dates
-        className="w-full border p-2 rounded mb-3"
-        required
+        min={today}
+        className="w-full border p-2 rounded mb-1"
       />
+      {errors.date && <p className="text-red-500 text-sm mb-2">{errors.date}</p>}
 
-      {/* Message / Notes */}
-      <label className="block mb-1 font-medium">Message / Notes (Optional)</label>
+      {/* Message */}
+      <label className="block mb-1 font-medium" htmlFor="message">
+        Message / Notes (Optional)
+      </label>
       <textarea
+        id="message"
         name="message"
         value={formData.message}
         onChange={handleChange}
         className="w-full border p-2 rounded mb-3"
         placeholder="Any special request or concern?"
         rows="3"
-      ></textarea>
+      />
 
-      {/* Submit Button */}
+      {/* Submit */}
       <button
         type="submit"
         disabled={isSending}
@@ -192,7 +239,6 @@ export default function BookingForm({ onClose, selectedService }) {
       >
         {isSending ? (
           <>
-            {/* Spinner */}
             <svg
               className="animate-spin h-5 w-5 mr-2 text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +266,7 @@ export default function BookingForm({ onClose, selectedService }) {
         )}
       </button>
 
-      {/* Cancel Button */}
+      {/* Cancel */}
       <button
         type="button"
         onClick={onClose}

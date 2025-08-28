@@ -1,4 +1,3 @@
-// src/components/ServiceCard.jsx
 import { useState } from "react";
 import ServiceDetails from "./ServiceDetails";
 
@@ -6,61 +5,67 @@ export default function ServiceCard({ service, category, onOpenBooking }) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <div className="p-6 rounded-2xl bg-white shadow-sm border hover:shadow-md transition">
-      {service.image && (
-        <img
-          src={service.image}
-          alt={service.name}
-          className="w-full h-40 object-cover rounded-lg mb-4"
-          onError={(e) => (e.currentTarget.style.display = "none")}
-        />
-      )}
+    <>
+      <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+        {/* Service Image */}
+        {service.image && (
+          <img
+            src={service.image}
+            alt={service.name}
+            className="w-full h-40 sm:h-48 object-cover rounded-lg mb-3"
+          />
+        )}
 
-      <h4 className="text-lg font-semibold">{service.name}</h4>
+        {/* Service Name */}
+        <h4 className="text-base sm:text-lg font-semibold mb-1">
+          {service.name}
+        </h4>
 
-      {service.description && (
-        <p className="text-gray-500 text-sm mt-2 line-clamp-3">
-          {service.description}
-        </p>
-      )}
+        {/* Tagline */}
+        {service.tagline && (
+          <p className="text-gray-700 font-medium text-xs sm:text-sm mb-1">
+            {service.tagline}
+          </p>
+        )}
 
-      <div className="flex gap-3 mt-4">
-        <button
-          onClick={() =>
-            onOpenBooking({
-              label: service.name,
-              id: service.id,
-              category: category,
-            })
-          }
-          className="px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-800"
-        >
-          Enquire
-        </button>
+        {/* Short description */}
+        {service.description && (
+          <p className="text-gray-500 text-xs sm:text-sm line-clamp-3 flex-grow">
+            {service.description}
+          </p>
+        )}
 
-        <button
-          onClick={() => setShowDetails(true)}
-          className="px-4 py-2 border rounded-xl hover:bg-gray-100"
-        >
-          View Details
-        </button>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-2 mt-4">
+          <button
+            onClick={() => setShowDetails(true)}
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-200 rounded-lg text-xs sm:text-sm hover:bg-gray-300"
+          >
+            View Details
+          </button>
+          <button
+            onClick={() =>
+              onOpenBooking({
+                service_name: service.name,
+                service_price: service.price,
+                category,
+              })
+            }
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-white rounded-lg text-xs sm:text-sm hover:bg-gray-800"
+          >
+            Book Now
+          </button>
+        </div>
       </div>
 
       {/* Details Modal */}
       {showDetails && (
         <ServiceDetails
-          service={{ ...service, category }}
+          service={service}
           onClose={() => setShowDetails(false)}
-          onBook={(svc) => {
-            setShowDetails(false);
-            onOpenBooking({
-              label: svc.name,
-              id: svc.id,
-              category: svc.category,
-            });
-          }}
+          onOpenBooking={onOpenBooking}
         />
       )}
-    </div>
+    </>
   );
 }

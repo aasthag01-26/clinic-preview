@@ -1,40 +1,42 @@
-// src/pages/Services.jsx
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import servicesData from "../data/servicesData";
-import ServiceDetails from "../components/ServiceDetails";
+import ServiceCard from "../components/ServiceCard";
 
 export default function Services({ onOpenBooking }) {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const initialConcern = params.get("concern");
 
-  const [activeCategory, setActiveCategory] = useState(
-    initialConcern || servicesData.categories[0]?.category
-  );
-  const [detailService, setDetailService] = useState(null);
+  // ✅ Access categories array properly
+  const categories = servicesData.categories;
 
-  // Update activeCategory if URL has ?concern=...
+  const [activeCategory, setActiveCategory] = useState(
+    initialConcern || categories[0]?.category
+  );
+
   useEffect(() => {
     if (initialConcern) setActiveCategory(initialConcern);
   }, [initialConcern]);
 
-  const currentCategory = servicesData.categories.find(
+  const currentCategory = categories.find(
     (c) => c.category === activeCategory
   );
 
   return (
-    <section className="py-16 bg-[#FFF5EF]">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
+    <section className="py-12 sm:py-16 bg-[#FFF5EF]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10">
+          Our Services
+        </h2>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap gap-4 justify-center mb-10">
-          {servicesData.categories.map((cat, index) => (
+        <div className="flex flex-wrap gap-2 sm:gap-4 justify-center mb-8 sm:mb-10">
+          {categories.map((cat, index) => (
             <button
               key={index}
               onClick={() => setActiveCategory(cat.category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium transition ${
                 activeCategory === cat.category
                   ? "bg-black text-white"
                   : "bg-white border border-gray-300 hover:bg-gray-100"
@@ -48,84 +50,26 @@ export default function Services({ onOpenBooking }) {
         {/* Services Grid */}
         {currentCategory && (
           <div>
-            <h3 className="text-2xl font-semibold text-center mb-2">
+            <h3 className="text-xl sm:text-2xl font-semibold text-center mb-2">
               {currentCategory.category}
             </h3>
-            <p className="text-center text-gray-700 mb-8">
+            <p className="text-center text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base">
               {currentCategory.about}
             </p>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              {currentCategory.services.map((s) => (
-                <div
-                  key={s.id ?? s.name}
-                  className="p-6 rounded-2xl bg-white shadow-sm border hover:shadow-md transition"
-                >
-                  {s.image && (
-                    <img
-                      src={s.image}
-                      alt={s.name}
-                      className="w-full h-40 object-cover rounded-lg mb-4"
-                      onError={(e) => (e.currentTarget.style.display = "none")}
-                    />
-                  )}
-
-                  <h4 className="text-lg font-semibold">{s.name}</h4>
-
-                  {s.description && (
-                    <p className="text-gray-500 text-sm mt-2 line-clamp-3">
-                      {s.description}
-                    </p>
-                  )}
-
-                  <div className="flex gap-3 mt-4">
-                    <button
-                      onClick={() =>
-                        onOpenBooking({
-                          label: s.name,
-                          category: currentCategory.category,
-                          id: s.id,
-                        })
-                      }
-                      className="px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-800"
-                    >
-                      Enquire
-                    </button>
-
-                    <button
-                      onClick={() =>
-                        setDetailService({
-                          ...s,
-                          category: currentCategory.category,
-                        })
-                      }
-                      className="px-4 py-2 border rounded-xl hover:bg-gray-100"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
+            <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+              {currentCategory.services.map((s, i) => (
+                <ServiceCard
+                  key={s.id ?? s.name ?? i}
+                  service={s}
+                  category={currentCategory.category}
+                  onOpenBooking={onOpenBooking}
+                />
               ))}
             </div>
           </div>
         )}
       </div>
-
-      {/* Service Details Modal */}
-      {detailService && (
-        <ServiceDetails
-          service={detailService}
-          onClose={() => setDetailService(null)}
-          onBook={(svc) => {
-            setDetailService(null);
-            onOpenBooking({
-              label: svc.name,
-              id: svc.id,
-              category: svc.category,
-            });
-          }}
-        />
-      )}
     </section>
   );
 }

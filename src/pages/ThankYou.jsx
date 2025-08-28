@@ -1,15 +1,19 @@
-// src/pages/ThankYou.jsx
+import { CheckCircle2 } from "lucide-react";
+
 export default function ThankYou() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-[#FFF5EF] px-4 text-center">
-      {/* Title */}
-      <h1 className="text-4xl font-bold mb-3">🎉 Thank You!</h1>
+    <section className="flex flex-col items-center justify-center min-h-screen bg-[#FFF5EF] px-4 sm:px-6 text-center">
+      
+      {/* Success Icon */}
+      <CheckCircle2 className="text-green-600 w-14 h-14 sm:w-16 sm:h-16 mb-4" />
+
+      {/* Heading */}
+      <h1 className="text-3xl sm:text-4xl font-bold mb-3">🎉 Thank You!</h1>
 
       {/* Subtitle */}
-      <p className="text-lg text-gray-700 mb-6 max-w-xl">
-        We’ve received your booking request. Our team will contact you via
-        phone or WhatsApp within <span className="font-semibold">24 hours</span> 
-        to confirm your appointment.
+      <p className="text-base sm:text-lg text-gray-700 mb-6 max-w-xl">
+        We’ve received your booking request. Our team will contact you within{" "}
+        <span className="font-semibold">24 hours</span> to confirm.
       </p>
 
       {/* Actions */}
@@ -22,7 +26,7 @@ export default function ThankYou() {
         </a>
 
         <a
-          href="https://www.instagram.com/purelyrupayna?igsh=bGYxcm1wZDNtdXRl"
+          href="https://www.instagram.com/purelyrupayna"
           target="_blank"
           rel="noopener noreferrer"
           className="block text-gray-700 hover:underline"
@@ -32,7 +36,7 @@ export default function ThankYou() {
 
         <p className="text-gray-500 text-sm">
           Urgent? Call us at{" "}
-          <a href="tel:+919876543210" className="font-semibold hover:underline">
+          <a href="tel:+919205661676" className="font-semibold hover:underline">
             +91-9205661676
           </a>
         </p>

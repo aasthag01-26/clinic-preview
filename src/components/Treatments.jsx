@@ -1,4 +1,3 @@
-// src/components/ExploreTreatments.jsx
 import { useNavigate } from "react-router-dom";
 
 const categories = [
@@ -14,7 +13,7 @@ export default function ExploreTreatments() {
   const navigate = useNavigate();
 
   const handleClick = (category) => {
-    navigate(`/services?concern=${encodeURIComponent(category)}`); // ✅ fixed
+    navigate(`/services?concern=${encodeURIComponent(category)}`);
   };
 
   return (
@@ -24,10 +23,14 @@ export default function ExploreTreatments() {
         {categories.map((c, i) => (
           <div
             key={i}
-            className="relative cursor-pointer rounded-2xl overflow-hidden shadow-lg"
+            className="relative cursor-pointer rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
             onClick={() => handleClick(c.name)}
           >
-            <img src={c.image} alt={c.name} className="w-full h-56 object-cover" />
+            <img
+              src={c.image}
+              alt={c.name}
+              className="w-full h-56 object-cover transition-transform duration-300"
+            />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <span className="text-white text-xl font-semibold">{c.name}</span>
             </div>

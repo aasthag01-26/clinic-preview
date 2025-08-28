@@ -15,29 +15,28 @@ export default function HeroVideo() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-[70vh] md:h-screen overflow-hidden">
       {/* Background Video */}
       <video
         ref={videoRef}
-        src="/videos/your-video.mp4" // apna path daalna
+        src="/videos/hero.mp4"
         autoPlay
         loop
         muted
+        playsInline
+        preload="auto"
         className="w-full h-full object-cover"
       />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
-
-      {/* Overlay Content with Animation */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center text-white px-4">
         
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold mb-4"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4"
         >
           Welcome to Glowshine Clinic
         </motion.h1>
@@ -47,7 +46,7 @@ export default function HeroVideo() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-2xl mb-6"
+          className="text-base sm:text-lg md:text-2xl mb-6 max-w-2xl"
         >
           Advanced Skin & Hair Treatments Backed by Science ✨
         </motion.p>
