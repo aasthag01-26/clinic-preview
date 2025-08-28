@@ -1,3 +1,4 @@
+// src/pages/Services.jsx
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import servicesData from "../data/servicesData";
@@ -8,8 +9,8 @@ export default function Services({ onOpenBooking }) {
   const params = new URLSearchParams(location.search);
   const initialConcern = params.get("concern");
 
-  // ✅ Access categories array properly
-  const categories = servicesData.categories;
+  // Access categories properly
+  const categories = servicesData.categories || [];
 
   const [activeCategory, setActiveCategory] = useState(
     initialConcern || categories[0]?.category

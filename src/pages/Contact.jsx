@@ -1,3 +1,4 @@
+// src/pages/Contact.jsx
 import { useState } from "react";
 
 export default function Contact() {
@@ -15,7 +16,6 @@ export default function Contact() {
 
     try {
       const res = await fetch("https://formspree.io/f/mnqkljvz", {
-        // 👈 replace with your Formspree form ID
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -122,7 +122,9 @@ export default function Contact() {
               +91-9205661676
             </a>
           </p>
-          <p className="text-lg font-semibold text-gray-700">📍 Location: Delhi, India</p>
+          <p className="text-lg font-semibold text-gray-700">
+            📍 Location: Delhi, India
+          </p>
           <a
             href="https://www.instagram.com/purelyrupayna?igsh=bGYxcm1wZDNtdXRl"
             target="_blank"

@@ -8,7 +8,11 @@ export default function Home({ onOpenBooking }) {
   return (
     <>
       {/* Hero Section */}
-      <Hero onOpenBooking={() => onOpenBooking({ label: "General Appointment", price: null })} />
+      <Hero
+        onOpenBooking={() =>
+          onOpenBooking({ label: "General Appointment", price: null })
+        }
+      />
 
       {/* Treatments Section */}
       <Treatments onEnquire={onOpenBooking} />
