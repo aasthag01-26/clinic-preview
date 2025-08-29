@@ -1,7 +1,7 @@
 // src/pages/About.jsx
 export default function About() {
   return (
-    <section id="about" className="bg-[#FFF5EF] py-12 md:py-20">
+    <section id="about" className="bg-[#FFF5EF] pt-36 pb-12 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         {/* About Us */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -39,7 +39,7 @@ export default function About() {
             </h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               Shruti Sharma founded{" "}
-              <span className="font-semibold text-pink-600">Rupayna Skincare</span> 
+              <span className="font-semibold text-pink-600">Rupayna Skincare</span> {" "}
                with a vision to bring safe, natural, and effective skincare solutions to everyone. 
               Her mission is to blend the goodness of traditional remedies with modern science, 
               offering products that truly care for your skin.

@@ -38,8 +38,8 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-[#FFF5EF] py-12 md:py-20">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section className="bg-[#FFF5EF] pt-48 pb-12 md:py-28">
+      <div className="max-w-4xl mx-auto px-6  text-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
           Contact Us
         </h2>

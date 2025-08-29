@@ -26,8 +26,9 @@ export default function Services({ onOpenBooking }) {
 
   return (
     <section className="py-12 sm:py-16 bg-[#FFF5EF]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10">
+      <div className="container mx-auto px-4 pt-36 pb-12
+      ">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
           Our Services
         </h2>
 
