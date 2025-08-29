@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-body { 
-  @apply bg-background text-neutral;
+/* ✅ Full height layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5ef; /* fallback for when Tailwind is not loaded */
 }
 
-.btn-primary { 
-  @apply inline-flex items-center justify-center rounded-xl bg-brand-600 text-white px-6 py-3 font-semibold hover:bg-brand-700 transition duration-300;
+/* ✅ Custom Base Styles */
+@layer base {
+  body {
+    @apply bg-background text-neutral;
+  }
 }
 
-.btn-outline { 
-  @apply inline-flex items-center justify-center rounded-xl border-2 border-brand-600 text-brand-700 px-6 py-3 font-semibold hover:bg-brand-50 transition;
-}
+/* ✅ Reusable Utilities */
+@layer components {
+  .btn-primary { 
+    @apply inline-flex items-center justify-center rounded-xl bg-brand-600 text-white px-6 py-3 font-semibold hover:bg-brand-700 transition duration-300;
+  }
 
-.input {
-  @apply w-full rounded-xl border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none;
-}
+  .btn-outline { 
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-brand-600 text-brand-700 px-6 py-3 font-semibold hover:bg-brand-50 transition;
+  }
 
-.card {
-  @apply bg-white rounded-2xl shadow-md p-4 md:p-6;
-}
+  .input {
+    @apply w-full rounded-xl border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:outline-none;
+  }
 
-.btn-red {
-  @apply inline-flex items-center justify-center rounded-xl bg-brand-red text-white px-6 py-3 font-semibold hover:bg-red-700 transition;
+  .card {
+    @apply bg-white rounded-2xl shadow-md p-4 md:p-6;
+  }
+
+  .btn-red {
+    @apply inline-flex items-center justify-center rounded-xl bg-brand-red text-white px-6 py-3 font-semibold hover:bg-red-700 transition;
+  }
 }

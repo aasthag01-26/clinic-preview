@@ -16,12 +16,17 @@ export default function Navbar({ onOpenBooking }) {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-pink-700">
-          Rupayna
+        
+        {/* ✅ Logo */}
+        <Link to="/" className="flex items-center space-x-2">
+          <img 
+            src="/rupaynalogo.jpg" 
+            alt="Rupayna Logo" 
+            className="h-[80px] w-auto object-contain" 
+          />
         </Link>
 
-        {/* Desktop Nav */}
+        {/* ✅ Desktop Nav */}
         <div className="hidden md:flex space-x-6 items-center">
           {navItems.map((item) => (
             <Link
@@ -29,22 +34,22 @@ export default function Navbar({ onOpenBooking }) {
               to={item.path}
               className={`transition-colors duration-300 ${
                 location.pathname === item.path
-                  ? "text-pink-700 font-semibold"
-                  : "text-gray-700"
-              } hover:text-pink-700`}
+                  ? "text-brand-pink font-semibold"
+                  : "text-neutral-dark"
+              } hover:text-brand-pink`}
             >
               {item.label}
             </Link>
           ))}
           <button
             onClick={() => onOpenBooking("General Enquiry")}
-            className="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300"
+            className="px-4 py-2 bg-brand-pink text-white rounded-lg shadow-md hover:bg-rose-600 transition-colors duration-300"
           >
             Book Now
           </button>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* ✅ Mobile Hamburger */}
         <button
           className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -53,7 +58,7 @@ export default function Navbar({ onOpenBooking }) {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ✅ Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           {navItems.map((item) => (
@@ -63,8 +68,8 @@ export default function Navbar({ onOpenBooking }) {
               onClick={() => setMenuOpen(false)}
               className={`block px-4 py-3 border-b transition-colors duration-300 ${
                 location.pathname === item.path
-                  ? "text-pink-700 font-semibold"
-                  : "text-gray-700"
+                  ? "text-brand-pink font-semibold"
+                  : "text-neutral-dark"
               } hover:bg-gray-50`}
             >
               {item.label}
@@ -75,7 +80,7 @@ export default function Navbar({ onOpenBooking }) {
               onOpenBooking("General Enquiry");
               setMenuOpen(false);
             }}
-            className="w-full px-4 py-3 bg-pink-600 text-white text-left hover:bg-pink-700 transition-colors duration-300"
+            className="w-full px-4 py-3 bg-brand-pink text-white text-left hover:bg-rose-600 transition-colors duration-300"
           >
             Book Now
           </button>

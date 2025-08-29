@@ -29,9 +29,11 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Navbar gets modal handler */}
       <Navbar onOpenBooking={openBookingModal} />
 
-      <main className="flex-grow pt-16">
+      {/* Main content */}
+      <main className="flex-grow pt-0 sm:pt-4">
         <Routes>
           <Route path="/" element={<Home onOpenBooking={openBookingModal} />} />
           <Route path="/about" element={<About />} />
@@ -41,11 +43,13 @@ export default function App() {
         </Routes>
       </main>
 
+      {/* Footer + Sticky Buttons */}
       <Footer />
       <StickyButtons />
+      {/* If you plan to use another sticky bar, keep it as optional */}
       {/* <StickyContactBar /> */}
 
-      {/* ✅ Centralized Booking Modal */}
+      {/* ✅ Centralized Booking Modal (always mounted for accessibility) */}
       <BookingModal
         isOpen={isModalOpen}
         onClose={closeBookingModal}

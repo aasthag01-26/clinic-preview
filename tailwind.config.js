@@ -7,10 +7,15 @@ export default {
         background: "#ffffff",  // white background
         neutral: "#1f2937",     // gray-800 text
 
+
+        // 🎯 Brand Colors
         brand: {
           dark: "#111827",
           red: "#D90429",
           brown: "#8C5B3F",
+          pink: "#F43F5E",    // CTA button / highlights
+          blue: "#0EA5E9",    // CTA button / secondary
+          gold: "#EAB308",    // optional premium accent
           50:  "#f0fdfa",
           100: "#ccfbf1",
           200: "#99f6e4",
@@ -30,3 +35,5 @@ export default {
   },
   plugins: [],
 }
+
+        
