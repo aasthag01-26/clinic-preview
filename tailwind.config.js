@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         background: "#ffffff",  // white background
-        neutral: "#1f2937",     // gray-800 text
+        neutral: "#374151",     // gray-800 text
 
 
         // 🎯 Brand Colors
@@ -16,6 +16,7 @@ export default {
           pink: "#F43F5E",    // CTA button / highlights
           blue: "#0EA5E9",    // CTA button / secondary
           gold: "#EAB308",    // optional premium accent
+          teal: "#14b8a6",   // secondary
           50:  "#f0fdfa",
           100: "#ccfbf1",
           200: "#99f6e4",

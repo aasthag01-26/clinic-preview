@@ -6,7 +6,7 @@ export default function ServiceCard({ service, category, onOpenBooking }) {
 
   return (
     <>
-      <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+      <div className="bg-gray-50 p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-lg transition duration-300 flex flex-col">
         {/* Service Image */}
         {service.image && (
           <img
@@ -39,7 +39,7 @@ export default function ServiceCard({ service, category, onOpenBooking }) {
         <div className="flex flex-col sm:flex-row gap-2 mt-4">
           <button
             onClick={() => setShowDetails(true)}
-            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-200 rounded-lg text-xs sm:text-sm hover:bg-gray-300"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 border border-brand-teal text-brand-teal rounded-lg text-xs sm:text-sm hover:bg-brand-teal hover:text-white transition"
           >
             View Details
           </button>
@@ -51,7 +51,7 @@ export default function ServiceCard({ service, category, onOpenBooking }) {
                 category,
               })
             }
-            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-white rounded-lg text-xs sm:text-sm hover:bg-gray-800"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-brand-pink text-white rounded-lg text-xs sm:text-sm hover:bg-pink-600 transition"
           >
             Book Now
           </button>

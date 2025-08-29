@@ -7,6 +7,7 @@ import StickyButtons from "./components/StickyButtons";
 import ThankYou from "./pages/ThankYou";
 import BookingModal from "./components/BookingModal";
 
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";

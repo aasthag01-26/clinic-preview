@@ -27,7 +27,7 @@ export default function Testimonials() {
           ].map((t, i) => (
             <div
               key={i}
-              className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition"
+              className="bg-white shadow-md rounded-xl border-l-4 border-brand-pink"
             >
               <blockquote className="text-gray-600 italic">{t.text}</blockquote>
               <div className="mt-4">{t.rating}</div>

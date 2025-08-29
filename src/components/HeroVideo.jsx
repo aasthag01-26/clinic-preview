@@ -15,18 +15,21 @@ export default function HeroVideo() {
   };
 
   return (
-    <div className="relative w-full h-[70vh] md:h-screen overflow-hidden">
+    <div className="p-3 bg-white rounded-xl shadow-md mt-6 md:mt-8">
       {/* Background Video */}
-      <video
-        ref={videoRef}
-        src="/videos/hero.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="w-full h-full object-cover"
-      />
+     <div className="p-3 bg-white rounded-xl shadow-md mt-6 md:mt-8">
+  <video
+    src="/rupanyavideo.mp4"
+    autoPlay
+    controls
+    loop
+    playsInline
+    aria-label="Introduction video about Rupayna Clinic"
+    className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg border border-gray-200"
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center text-white px-4">
