@@ -19,13 +19,16 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-brand-teal mb-4">Contact</h3>
           <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
-            <Phone size={18} /> +91 9205661676
+            <Phone size={18} /> +91 7378626348
           </p>
           <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
-            <Mail size={18} /> tanyagoyal18404@gmail.com
+            <Mail size={18} /> mohdamanat02@gmail.com
           </p>
           <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
             <MapPin size={18} /> New Delhi, India
+          </p>
+          <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
+            <MapPin size={18} /> Mumbai, India
           </p>
         </div>
 
@@ -42,7 +45,7 @@ export default function Footer() {
               <Instagram size={18} /> Instagram
             </a>
             <a
-              href="https://wa.me/919205661676"
+              href="https://wa.me/917378626348"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-teal flex items-center gap-2 transition"

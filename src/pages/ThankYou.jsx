@@ -36,8 +36,8 @@ export default function ThankYou() {
 
         <p className="text-gray-500 text-sm">
           Urgent? Call us at{" "}
-          <a href="tel:+919205661676" className="font-semibold hover:underline">
-            +91-9205661676
+          <a href="tel:+917378626348" className="font-semibold hover:underline">
+            +91-7378626348
           </a>
         </p>
       </div>

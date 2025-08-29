@@ -118,8 +118,8 @@ export default function Contact() {
         <div className="space-y-4 mt-6">
           <p className="text-lg font-semibold text-gray-700">
             📞 Call:{" "}
-            <a href="tel:+919205661676" className="text-black hover:underline">
-              +91-9205661676
+            <a href="tel:+917378626348" className="text-black hover:underline">
+              +91-7378626348
             </a>
           </p>
           <p className="text-lg font-semibold text-gray-700">

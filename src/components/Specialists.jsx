@@ -10,13 +10,13 @@ export default function Specialists() {
           {/* Doctor Card */}
           {[
             {
-              img: "public/doctor/doctor.jpg",
+              img: "/doctor/doctor.jpg",
               name: "Dr. Shailesh Kumar",
               role: "Facial Aesthetic Surgeon | FAM PMU (USA)",
               desc: "Highly skilled in advanced cosmetic and minimally invasive facial procedures.",
             },
             {
-              img: "public/doctor/doctorkanchan.jpg",
+              img: "/doctor/doctorkanchan.jpg",
               name: "Dr. Kanchan Suthar",
               role: "Dermatologist | Aesthetic Specialist",
               desc: "Expert in skin health, rejuvenation, and advanced aesthetics.",
