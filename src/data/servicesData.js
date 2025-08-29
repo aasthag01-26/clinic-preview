@@ -13,7 +13,7 @@ const servicesData = {
           id: "lhr-full-body",
           name: "Full Body Laser Hair Reduction",
           tagline: "Permanent reduction of unwanted body hair.",
-          image: "/fullbodylaser.png",
+          image: "public/lhr/fullbodylaser.png",
           details: {
             about:
               "A comprehensive solution for lasting hair reduction across arms, legs, back, underarms, bikini, and more. Our diode laser adapts to your skin type, ensuring effective results with unmatched comfort.",
@@ -56,7 +56,7 @@ const servicesData = {
           id: "lhr-full-face",
           name: "Full Face LHR",
           tagline: "Complete facial hair reduction.",
-          image: "/fullface.png",
+          image: "public/lhr/fullface.png",
           details: {
             about:
               "A focused treatment for complete face hair removal. Helps reduce growth, lighten pigmentation, and restore natural skin glow.",
@@ -81,7 +81,7 @@ const servicesData = {
           id: "lhr-upperlower-face",
           name: "Upper Face / Lower Face LHR",
           tagline: "Quick sessions for upper/lower face.",
-          image: "/images/face-laser.jpg",
+          image: "public/lhr/upperlowerfacelhr.webp",
           details: {
             about:
               "Perfect for clients who don’t need a full-face session but want targeted hair reduction.",
@@ -103,7 +103,7 @@ const servicesData = {
           id: "lhr-upperlip-chin",
           name: "Upper Lip & Chin LHR",
           tagline: "Fast treatment for upper lip & chin.",
-          image: "/images/upper-lip-chin.jpg",
+          image: "public/lhr/upperlipchinlhr.jpeg",
           details: {
             about:
               "Focused diode laser treatment for delicate upper lip and chin areas. Provides effective reduction with minimal downtime.",
@@ -125,7 +125,7 @@ const servicesData = {
           id: "lhr-side-locks",
           name: "Side Locks LHR",
           tagline: "Remove sideburns & facial hair.",
-          image: "/images/side-locks.jpg",
+          image: "public/lhr/sidelocks.jpeg",
           details: {
             about:
               "Targeted treatment to sculpt and smoothen the sideburns and temple region.",
@@ -147,7 +147,7 @@ const servicesData = {
           id: "lhr-underarms",
           name: "Underarms LHR",
           tagline: "Long lasting underarm hair reduction.",
-          image: "/images/underarms-laser.jpg",
+          image: "public/lhr/underarmslhr.jpeg",
           details: {
             about:
               "A quick and effective diode laser treatment designed for smooth, fresh underarms.",
@@ -169,7 +169,7 @@ const servicesData = {
           id: "lhr-bikini-line",
           name: "Bikini Line LHR",
           tagline: "Clean bikini line with long-term results.",
-          image: "/images/bikini-laser.jpg",
+          image: "public/lhr/bikiniline.jpeg",
           details: {
             about:
               "A sensitive-area treatment tailored with lower energy levels to maintain comfort while achieving results.",
@@ -191,7 +191,7 @@ const servicesData = {
           id: "lhr-full-front",
           name: "Full Front LHR",
           tagline: "Front body hair reduction.",
-          image: "/images/full-front.jpg",
+          image: "public/lhr/fullfrontlhr.jpeg",
           details: {
             about:
               "Targets front torso, stomach, and chest hair with safe laser technology.",
@@ -213,7 +213,7 @@ const servicesData = {
           id: "lhr-full-back",
           name: "Full Back LHR",
           tagline: "Back hair removal & smoothing.",
-          image: "/images/full-back-laser.jpg",
+          image: "public/lhr/fullbacklhr.jpeg",
           details: {
             about:
               "Targets the full back area, reducing regrowth with long-term results.",
@@ -235,7 +235,7 @@ const servicesData = {
           id: "lhr-full-arms",
           name: "Full Arms LHR",
           tagline: "Smooth, hair-reduced arms.",
-          image: "/images/full-arms.jpg",
+          image: "public/lhr/fullarmslhr.jpeg",
           details: {
             about:
               "Long-term solution for arm hair reduction, tailored to all skin tones.",
@@ -257,7 +257,7 @@ const servicesData = {
           id: "lhr-full-legs",
           name: "Full Legs LHR",
           tagline: "Legs hair reduction for smooth skin.",
-          image: "/images/full-legs.jpg",
+          image: "public/lhr/fulllegslhr.jpeg",
           details: {
             about:
               "Covers thighs, calves, and feet areas with advanced diode laser.",
@@ -289,7 +289,7 @@ const servicesData = {
       id: "facial-derma-revive",
       name: "Derma Revive Facial",
       tagline: "Revive tired skin with deep hydration.",
-      image: "/images/derma-revive.jpg",
+      image: "public/facial/dermarevivefacial.jpeg",
       description: "Multi-step facial to deeply hydrate & restore glow.",
       details: {
         about:
@@ -328,7 +328,7 @@ const servicesData = {
       id: "facial-korean",
       name: "Korean Glass-Skin Facial",
       tagline: "Hydration & glow, Korean-style.",
-      image: "/images/korean-facial.jpg",
+      image: "public/facial/koreanglowfacial.jpeg",
       description: "Brightens skin and reduces pigmentation for a glass-skin finish.",
       details: {
         about:
@@ -360,7 +360,7 @@ const servicesData = {
       id: "facial-acne-arrestor",
       name: "Acne Arrestor Facial",
       tagline: "Targets acne & calms skin.",
-      image: "/images/acne-facial.jpg",
+      image: "public/facial/acnearrestorfacial.jpeg",
       description: "Reduces acne, unclogs pores & soothes irritation.",
       details: {
         about:
@@ -393,7 +393,7 @@ const servicesData = {
       id: "facial-quick-fix",
       name: "Quick Fix Radiance Facial",
       tagline: "Instant glow for events.",
-      image: "/images/quick-fix.jpg",
+      image: "public/facial/quickfixfacial.jpeg",
       description: "Fast brightening treatment for pre-events.",
       details: {
         about:
@@ -410,7 +410,7 @@ const servicesData = {
       id: "facial-insta-collagen",
       name: "Insta Collagen Boost Facial",
       tagline: "Plumps skin with collagen infusion.",
-      image: "/images/collagen-boost.jpg",
+      image: "public/facial/instacolleganfacial.jpeg",
       description: "Stimulates collagen to improve elasticity & reduce fine lines.",
       details: {
         about:
@@ -429,7 +429,7 @@ const servicesData = {
       id: "facial-hydra-boost",
       name: "Hydra Boost Facial",
       tagline: "Deep hydration & soothing.",
-      image: "/images/hydra-boost.jpg",
+      image: "public/facial/hydrafacial.jpeg",
       description: "Replenishes skin moisture and repairs barrier.",
       details: {
         about:
@@ -448,7 +448,7 @@ const servicesData = {
       id: "facial-double-derma-boost",
       name: "Double Derma Boost Facial",
       tagline: "Dual-action rejuvenation.",
-      image: "/images/double-derma.jpg",
+      image: "public/facial/doubledharmaboost.jpeg",
       description: "Combines exfoliation + infusion for advanced glow.",
       details: {
         about:
@@ -465,7 +465,7 @@ const servicesData = {
       id: "facial-elastic-boost",
       name: "Elastic Boost Facial",
       tagline: "Restores firmness & elasticity.",
-      image: "/images/elastic-boost.jpg",
+      image: "public/facial/elastinboostfacial.jpeg",
       description: "Firming treatment to fight sagging & loss of elasticity.",
       details: {
         about:
@@ -482,7 +482,7 @@ const servicesData = {
       id: "facial-couple-laser",
       name: "Couple Laser Facial",
       tagline: "Glow together, skin sync radiance.",
-      image: "/images/couple-laser.jpg",
+      image: "public/facial/couplefacial.jpeg",
       description: "A relaxing laser facial designed for two.",
       details: {
         about:
@@ -506,9 +506,9 @@ const servicesData = {
   "services": [
     {
       "id": "body-kb-slimming",
-      "name": "KB Slimming Facial",
+      "name": "Slimming Facial",
       "tagline": "Targeted slimming for small zones.",
-      "image": "/images/kb-slimming.jpg",
+      "image": "public/slimming/faceslimming.webp",
       "description": "Localized slimming treatment designed for smaller body areas.",
       "details": {
         "about": "A precision contouring treatment that targets localized fat deposits in small zones like chin, arms, or under-bust using non-invasive machine technology and lymphatic massage.",
@@ -537,7 +537,7 @@ const servicesData = {
       "id": "body-abdomen-inch-loss",
       "name": "Abdomen Inch Loss",
       "tagline": "Safely reduce inches from your waistline.",
-      "image": "/images/abdomen-inch-loss.jpg",
+      "image": "public/slimming/abdomenslimming.jpeg",
       "description": "Advanced fat melting and inch-loss treatment for the midsection.",
       "details": {
         "about": "A combination of cavitation, massage, and topical actives designed to reduce abdominal circumference and enhance waist contour without surgery.",
@@ -566,7 +566,7 @@ const servicesData = {
       "id": "body-arms-inch-loss",
       "name": "Arms Inch Loss",
       "tagline": "Tone & slim your arms safely.",
-      "image": "/images/arms-inch-loss.jpg",
+      "image": "public/slimming/arminchloss.jpeg",
       "description": "Targeted inch-loss treatment for upper and lower arms.",
       "details": {
         "about": "Designed to address stubborn arm fat and flabbiness, this treatment combines cavitation, massage, and tightening modalities for a more toned look.",
@@ -595,7 +595,7 @@ const servicesData = {
       "id": "body-hips-inch-loss",
       "name": "Hips Inch Loss",
       "tagline": "Sculpt & contour your hips.",
-      "image": "/images/hips-inch-loss.jpg",
+      "image": "public/slimming/hipinchloss.jpeg",
       "description": "Non-surgical hip sculpting & inch-loss program.",
       "details": {
         "about": "Focused on reducing hip circumference and contouring flanks, this treatment combines cavitation, RF, and massage for visible shaping.",
@@ -624,7 +624,7 @@ const servicesData = {
       "id": "body-thighs-inch-loss",
       "name": "Thighs Inch Loss",
       "tagline": "Slim & refine your thighs.",
-      "image": "/images/thighs-inch-loss.jpg",
+      "image": "public/slimming/thighinchloss.jpeg",
       "description": "Targeted thigh slimming & contouring treatment.",
       "details": {
         "about": "A specialized program that reduces inner thigh fat, tones outer thighs, and improves leg contour using combined modalities.",
@@ -653,7 +653,7 @@ const servicesData = {
       "id": "body-love-handle-inch-loss",
       "name": "Love Handle Inch Loss",
       "tagline": "Smooth your waistline & sides.",
-      "image": "/images/love-handle.jpg",
+      "image": "public/slimming/lovehandle.jpeg",
       "description": "Focused slimming for love handles & flank region.",
       "details": {
         "about": "This treatment specifically targets the side waist (love handles) to create a smoother, more sculpted silhouette.",
@@ -681,7 +681,7 @@ const servicesData = {
       "id": "body-upper-slimming",
       "name": "Upper Body Slimming",
       "tagline": "Comprehensive contouring for chest, arms & back.",
-      "image": "/images/upper-body-slimming.jpg",
+      "image": "public/slimming/upperbodyinchloss.jpeg",
       "description": "Holistic upper body recontouring & inch-loss program.",
       "details": {
         "about": "A multi-technique program designed to slim and sculpt the upper torso, including arms, back, and chest, for a more balanced physique.",
@@ -709,7 +709,7 @@ const servicesData = {
       "id": "body-lower-slimming",
       "name": "Lower Body Slimming",
       "tagline": "Shape thighs, hips & calves.",
-      "image": "/images/lower-body-slimming.jpg",
+      "image": "public/slimming/lowerbody.jpeg",
       "description": "Targeted slimming for the lower body.",
       "details": {
         "about": "A specialized slimming program for the thighs, hips, and calves, aimed at improving leg contour and reducing stubborn fat pockets.",
@@ -738,7 +738,7 @@ const servicesData = {
       "id": "body-fat-burn-injection",
       "name": "Fat Burn Injection",
       "tagline": "Clinically assisted fat reduction.",
-      "image": "/images/fat-burn-injection.jpg",
+      "image": "public/slimming/fatburninjection.jpg",
       "description": "Medical injections to assist localized fat metabolism.",
       "details": {
         "about": "Under clinical supervision, safe fat-burning injections are administered to target stubborn fat deposits and accelerate metabolism in localized areas.",
@@ -772,7 +772,7 @@ const servicesData = {
         id: "hair-vit-trichology",
         name: "Vit Hair Trichology",
         tagline: "Scalp & hair health diagnostics + treatment.",
-        image: "/images/vit-hair.jpg",
+        image: "public/hair/vithair.jpeg",
         description: "Trichology consultation and targeted therapies.",
         details: {
           about: "Comprehensive hair & scalp assessment plus targeted therapy.",
@@ -789,7 +789,7 @@ const servicesData = {
         id: "hair-prp",
         name: "Hair PRP",
         tagline: "Platelet-rich plasma for hair regrowth.",
-        image: "/images/hair-prp.jpg",
+        image: "public/hair/prp.jpeg",
         description: "PRP injections to stimulate hair follicles.",
         details: {
           about: "Uses patient’s platelets to boost hair follicle regeneration.",
@@ -806,7 +806,7 @@ const servicesData = {
         id: "hair-gfc",
         name: "Hair GFC",
         tagline: "Growth factor concentrate therapy for hair.",
-        image: "/images/hair-gfc.jpg",
+        image: "public/hair/gfc.jpeg",
         description: "GFC therapy to stimulate hair regrowth.",
         details: {
           about: "Advanced growth factor injections for hair stimulation.",
@@ -830,7 +830,7 @@ const servicesData = {
         id: "polish-full-body",
         name: "Full Body Polish",
         tagline: "Full body glow — choices of peel.",
-        image: "/images/full-body-polish.jpg",
+        image: "public/skin/fullbodychemicalpeel.jpeg",
         description: "Full Body Polish available with multiple peel options.",
         details: {
           about: "Complete exfoliation & peel options for head-to-toe glow.",
@@ -847,7 +847,7 @@ const servicesData = {
         id: "polish-back-arms-legs",
         name: "Full Back / Arms / Legs Polish",
         tagline: "Targeted body polishing with peel options.",
-        image: "/images/back-polish.jpg",
+        image: "public/skin/bodypolishing.jpeg",
         description: "Polish for back, arms or legs; choose peel.",
         details: {
           about: "Targeted polishing for large body zones.",
@@ -864,7 +864,7 @@ const servicesData = {
         id: "detan-bikini-underarms-neck",
         name: "Bikini / Under Arms / Neck De-tan",
         tagline: "Lighten & rejuvenate sensitive zones.",
-        image: "/images/bikini-rejuvenation.jpg",
+        image: "public/skin/underarmsdetan.jpeg",
         description: "De-tan options for intimate and small body areas.",
         details: {
           about: "Gentle peels & polishing for sensitive regions.",
@@ -881,7 +881,7 @@ const servicesData = {
         id: "detan-dermabrasion-fullbody",
         name: "Skin De-Tan with Dermabrasion - Full Body",
         tagline: "Dermabrasion based full body detan.",
-        image: "/images/dermabrasion-full.jpg",
+        image: "public/skin/fullbodydtan.jpg",
         description: "Dermabrasion + polishing for full body.",
         details: {
           about: "Mechanical exfoliation + aftercare for deep de-tanning.",
@@ -898,7 +898,7 @@ const servicesData = {
         id: "detan-dermabrasion-back-arms-legs",
         name: "Skin De-Tan with Dermabrasion - Back/Arms/Legs",
         tagline: "Localized dermabrasion detan.",
-        image: "/images/dermabrasion-limb.jpg",
+        image: "public/skin/legs.jpeg",
         description: "Back/arms/legs dermabrasion.",
         details: {
           about: "Targeted dermabrasion for medium-sized areas.",
@@ -915,7 +915,7 @@ const servicesData = {
         id: "detan-dermabrasion-bikini-underarms-neck",
         name: "Skin De-Tan with Dermabrasion - Bikini/Under Arms/Neck",
         tagline: "Small-area dermabrasion detan.",
-        image: "/images/neck-detan.jpg",
+        image: "public/skin/neckdtan.jpeg",
         description: "Dermabrasion for sensitive small areas.",
         details: {
           about: "Dermabrasion tailored to small, sensitive zones.",
@@ -941,7 +941,7 @@ const servicesData = {
       "id": "peel-glycolic",
       "name": "Full Face Glycolic Peel",
       "tagline": "Surface renewal & brightness.",
-      "image": "/images/peel-glycolic.jpg",
+      "image": "public/chemicalpeel/glycolic.jpeg",
       "description": "Glycolic peel for skin texture & glow.",
       "details": {
         "about": "AHA-based chemical peel to improve texture and brightness.",
@@ -957,7 +957,7 @@ const servicesData = {
       "id": "peel-salicylic",
       "name": "Full Face Salicylic Peel",
       "tagline": "Oil control & acne-friendly peel.",
-      "image": "/images/peel-salicylic.jpg",
+      "image": "public/chemicalpeel/salicilic.jpeg",
       "description": "BHA peel for oily & acne-prone skin.",
       "details": {
         "about": "Salicylic acid peel to unclog pores and reduce oiliness.",
@@ -975,7 +975,7 @@ const servicesData = {
       "id": "peel-mandelic-under-eye",
       "name": "Under Eye Mandelic Peel",
       "tagline": "Gentle brightening for under-eye.",
-      "image": "/images/peel-under-eye.jpg",
+      "image": "public/chemicalpeel/mendalic.jpeg",
       "description": "Mild mandelic peel for under-eye area.",
       "details": {
         "about": "Gentle peel for delicate under eye skin to reduce pigmentation.",
@@ -993,7 +993,7 @@ const servicesData = {
       "id": "peel-mandelic-perioral",
       "name": "Perioral (Monkey Mouth) Mandelic Peel",
       "tagline": "Brighten perioral area.",
-      "image": "/images/peel-perioral.jpg",
+      "image": "public/chemicalpeel/monkeymouth.jpeg",
       "description": "Targeted mild peel around mouth.",
       "details": {
         "about": "Corrects perioral pigmentation & texture.",
@@ -1011,7 +1011,7 @@ const servicesData = {
       "id": "peel-lactic",
       "name": "Full Face Lactic Peel",
       "tagline": "Gentle AHA peel for hydration & brightness.",
-      "image": "/images/peel-lactic.jpg",
+      "image": "public/chemicalpeel/lacticpeel.jpeg",
       "description": "Hydrating lactic acid peel.",
       "details": {
         "about": "Mild AHA peel that exfoliates while hydrating.",
@@ -1029,7 +1029,7 @@ const servicesData = {
       "id": "peel-retinol-yellow",
       "name": "Retinol / Yellow Peel",
       "tagline": "Stronger peel for advanced skin concerns.",
-      "image": "/images/peel-retinol.jpg",
+      "image": "public/chemicalpeel/yellowpeel.jpeg",
       "description": "Retinol / Yellow peel for deeper correction.",
       "details": {
         "about": "Medium depth peel for pigmentation & texture issues.",
@@ -1056,7 +1056,7 @@ const servicesData = {
       "id": "inject-face-prp",
       "name": "Face PRP",
       "tagline": "Platelet therapy for skin rejuvenation.",
-      "image": "/images/face-prp.jpg",
+      "image": "public/injeactible/faceprp.jpeg",
       "description": "PRP injections to boost facial skin quality.",
       "details": {
         "about": "Uses patient platelet-rich plasma to stimulate collagen.",
@@ -1077,7 +1077,7 @@ const servicesData = {
       "id": "inject-face-gfc",
       "name": "Face GFC",
       "tagline": "Growth factor concentrate for face.",
-      "image": "/images/face-gfc.jpg",
+      "image": "public/injeactible/facegfc.jpeg",
       "description": "GFC injections to rejuvenate skin.",
       "details": {
         "about": "Advanced growth-factor therapy for facial rejuvenation.",
@@ -1095,7 +1095,7 @@ const servicesData = {
       "id": "inject-glutathione-600",
       "name": "Glutathione IV (600mg)",
       "tagline": "IV glutathione for antioxidant boost.",
-      "image": "/images/glutathione-600.jpg",
+      "image": "public/injeactible/glutathione600mg.jpeg",
       "description": "600mg IV glutathione infusion.",
       "details": {
         "about": "IV antioxidant therapy under medical supervision.",
@@ -1113,7 +1113,7 @@ const servicesData = {
       "id": "inject-glutathione-1800",
       "name": "Glutathione IV (1800mg)",
       "tagline": "Higher-dose IV antioxidant therapy.",
-      "image": "/images/glutathione-1800.jpg",
+      "image": "public/injeactible/glutathione1800mg.jpeg",
       "description": "1800mg IV glutathione infusion for stronger effect.",
       "details": {
         "about": "Higher dose infusion for intensive antioxidant support.",
