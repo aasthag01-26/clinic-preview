@@ -51,32 +51,9 @@ export default function Hero({ onOpenBooking }) {
         </div>
       </div>
 
-      {/* Stats Bar */}
-      <div className="bg-brand-dark text-white mt-12">
-        <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/20 text-center">
-          
-          {/* Combined Expertise */}
-          <div className="py-4 sm:py-0">
-            <div className="text-4xl mb-2 text-brand-pink"><FaCalendarAlt /></div>
-            <p className="text-2xl font-bold">20+ Yrs</p>
-            <p className="opacity-80">Combined Expertise</p>
-          </div>
-          
-          {/* FDA Approved */}
-          <div className="py-4 sm:py-0">
-            <div className="text-4xl mb-2 text-brand-teal"><FaMicroscope /></div>
-            <p className="text-2xl font-bold">US FDA</p>
-            <p className="opacity-80">Approved Technology</p>
-          </div>
-          
-          {/* Certified Doctors */}
-          <div className="py-4 sm:py-0">
-            <div className="text-4xl mb-2 text-rose-400"><FaUserMd /></div>
-            <p className="text-2xl font-bold">4</p>
-            <p className="opacity-80">Certified Specialists</p>
-          </div>
-        </div>
-      </div>
+      
+
+      
     </section>
   );
 }
