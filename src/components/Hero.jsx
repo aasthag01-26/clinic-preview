@@ -1,17 +1,16 @@
-import { FaUserMd, FaCalendarAlt, FaMicroscope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Hero({ onOpenBooking }) {
   return (
     <section className="relative overflow-hidden bg-[#F5F5F5]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-36 pb-0 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto px-6 pt-32 pb-12 grid md:grid-cols-2 gap-10 items-center">
         
         {/* LEFT: Text */}
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-brand-dark">
-            Achieve Flawless Skin, Backed by Science
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+            Achieve Flawless Skin, <br /> Backed by Science
           </h1>
-          <p className="mt-4 text-lg text-gray-700">
+          <p className="mt-4 text-lg text-gray-600">
             Your journey to radiant confidence starts here.
           </p>
 
@@ -19,16 +18,14 @@ export default function Hero({ onOpenBooking }) {
           <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
             <button
               onClick={() => onOpenBooking("General Enquiry")}
-              aria-label="Book an Appointment"
-              className="bg-brand-pink hover:bg-pink-600 text-white px-6 py-3 rounded-lg shadow-md transition-colors duration-300 font-medium"
+              className="bg-brand-teal hover:bg-teal-600 text-white px-6 py-3 rounded-lg shadow-md transition-colors duration-300 font-medium"
             >
               Book Appointment
             </button>
 
             <Link
               to="/services"
-              aria-label="Explore Treatments"
-              className="border border-brand-teal text-brand-teal px-6 py-3 rounded-lg shadow-md transition-colors duration-300 font-medium hover:bg-brand-teal hover:text-white"
+              className="border border-gray-800 text-gray-800 px-6 py-3 rounded-lg shadow-md transition-colors duration-300 font-medium hover:bg-gray-800 hover:text-white"
             >
               Explore Treatments
             </Link>
@@ -43,17 +40,12 @@ export default function Hero({ onOpenBooking }) {
             controls
             loop
             playsInline
-            aria-label="Introduction video about Rupayna Clinic"
             className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg border border-gray-200"
           >
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
-
-      
-
-      
     </section>
   );
 }

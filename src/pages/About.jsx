@@ -40,7 +40,7 @@ export default function About() {
             <p className="text-gray-600 leading-relaxed mb-4">
               Shruti Sharma founded{" "}
               <span className="font-semibold text-pink-600">Rupayna Skincare</span> 
-              with a vision to bring safe, natural, and effective skincare solutions to everyone. 
+               with a vision to bring safe, natural, and effective skincare solutions to everyone. 
               Her mission is to blend the goodness of traditional remedies with modern science, 
               offering products that truly care for your skin.
             </p>

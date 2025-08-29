@@ -13,7 +13,7 @@ const servicesData = {
           id: "lhr-full-body",
           name: "Full Body Laser Hair Reduction",
           tagline: "Permanent reduction of unwanted body hair.",
-          image: "/images/face-laser.jpg",
+          image: "/fullbodylaser.png",
           details: {
             about:
               "A comprehensive solution for lasting hair reduction across arms, legs, back, underarms, bikini, and more. Our diode laser adapts to your skin type, ensuring effective results with unmatched comfort.",
@@ -56,7 +56,7 @@ const servicesData = {
           id: "lhr-full-face",
           name: "Full Face LHR",
           tagline: "Complete facial hair reduction.",
-          image: "/images/face-laser.jpg",
+          image: "/fullface.png",
           details: {
             about:
               "A focused treatment for complete face hair removal. Helps reduce growth, lighten pigmentation, and restore natural skin glow.",
