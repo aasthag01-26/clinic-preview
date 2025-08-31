@@ -23,7 +23,7 @@ export default function About() {
           {/* Founder Image */}
           <div className="flex justify-center">
             <img
-              src="https://via.placeholder.com/350"
+              src="/rupaynamamimg.jpg"
               alt="Shruti Sharma"
               className="rounded-2xl shadow-lg w-72 md:w-80 h-auto object-cover"
             />

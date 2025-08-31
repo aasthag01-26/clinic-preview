@@ -10,7 +10,7 @@ export default function StickyButtons() {
       {isOpen && (
         <div className="flex flex-col gap-3 mb-2">
           <a
-            href="https://wa.me/917378626348"
+            href="https://wa.me/919211315446"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 text-white p-3 sm:p-4 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
@@ -18,7 +18,7 @@ export default function StickyButtons() {
             <FaWhatsapp size={20} />
           </a>
           <a
-            href="tel:+917378626348"
+            href="tel:+919211315446"
             className="bg-teal-600 hover:bg-teal-700 text-white p-3 sm:p-4 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
           >
             <Phone className="w-5 h-5" />

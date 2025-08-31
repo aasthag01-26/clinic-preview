@@ -100,26 +100,14 @@ export default function Contact() {
           <p className="mt-4 text-center font-medium">{statusMsg}</p>
         )}
 
-        {/* Map */}
-        <div className="mt-12">
-          <h3 className="text-lg font-semibold mb-2">Find Us</h3>
-          <iframe
-            title="Rupayna Skincare Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!...your-embed-code..."
-            style={{ width: "100%", height: "350px", border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-xl shadow-md"
-          />
-        </div>
+       
 
         {/* Contact Info */}
         <div className="space-y-4 mt-6">
           <p className="text-lg font-semibold text-gray-700">
             📞 Call:{" "}
-            <a href="tel:+917378626348" className="text-black hover:underline">
-              +91-7378626348
+            <a href="tel:+9192113 15446" className="text-black hover:underline">
+              +91-9211315446
             </a>
           </p>
           <p className="text-lg font-semibold text-gray-700">

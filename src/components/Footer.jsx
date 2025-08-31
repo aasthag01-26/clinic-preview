@@ -11,24 +11,35 @@ export default function Footer() {
             Rupayna Skincare
           </h2>
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-            Providing trusted skincare and aesthetics with <span className="text-brand-pink font-medium">care</span> & <span className="text-brand-teal font-medium">innovation</span>.
+            Providing trusted skincare and aesthetics with{" "}
+            <span className="text-brand-pink font-medium">care</span> &{" "}
+            <span className="text-brand-teal font-medium">innovation</span>.
           </p>
         </div>
 
         {/* Contact */}
         <div>
           <h3 className="text-lg font-semibold text-brand-teal mb-4">Contact</h3>
+          
+          {/* Delhi */}
           <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
-            <Phone size={18} /> +91 7378626348
+            <Phone size={18} /> +91 9211315446
           </p>
-          <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
-            <Mail size={18} /> mohdamanat02@gmail.com
-          </p>
-          <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
+          <p className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
             <MapPin size={18} /> New Delhi, India
           </p>
-          <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition">
+
+          {/* Mumbai */}
+          <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition mt-3">
+            <Phone size={18} /> +91 7378626348
+          </p>
+          <p className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
             <MapPin size={18} /> Mumbai, India
+          </p>
+
+          {/* Email */}
+          <p className="flex items-center justify-center md:justify-start gap-2 hover:text-brand-pink transition mt-3">
+            <Mail size={18} /> info@rupaynaskincare.com
           </p>
         </div>
 
@@ -45,7 +56,7 @@ export default function Footer() {
               <Instagram size={18} /> Instagram
             </a>
             <a
-              href="https://wa.me/917378626348"
+              href="https://wa.me/919211315446"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-teal flex items-center gap-2 transition"
